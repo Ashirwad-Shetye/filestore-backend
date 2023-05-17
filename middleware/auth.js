@@ -15,10 +15,10 @@ const protect = asyncHandler(async (req, res, next) => {
 
       // Verify token
 
-      // client.verifyIdToken({
-      //   idToken: token,
-      //   audience: process.env.GOOGLE_CLIENT_ID,
-      // });
+      client.verifyIdToken({
+        idToken: token,
+        audience: process.env.GOOGLE_CLIENT_ID,
+      });
 
       next();
     } catch (error) {
